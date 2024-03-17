@@ -1,5 +1,8 @@
 {
     "name": "learning-git",
     "version": "1.0.0",
-    "description": "This is a simple HTML project with Docker."
+    "description": "This is a simple HTML project with Docker.",
+    "scripts": {
+        "start": "http-server -p 8080"
+      }
   }
