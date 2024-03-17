@@ -5,9 +5,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
-RUN npm install
+RUN npm install http-server --save-dev
 
 COPY . /usr/src/app/
 
-EXPOSE 80 8080 443
 CMD ["npm", "start"]
