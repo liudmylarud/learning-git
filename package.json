@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "This is a simple HTML project with Docker.",
     "scripts": {
-        "start": "http-server -p 8080"
+        "start": "http-server -p 443"
       },
       "devDependencies": {
         "http-server": "^0.12.3"
