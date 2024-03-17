@@ -1,8 +1,13 @@
 FROM node:14
 RUN curl https://cli-assets.heroku.com/install.sh | sh
+
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY package*.json ./
+
+COPY package.json /usr/src/app/
 RUN npm install
-COPY . .
-EXPOSE 80 443
-CMD ["node", "app.js"]
+
+COPY . /usr/src/app/
+
+EXPOSE 80 8080 443
+CMD ["node", "app.js", "npm", "start"]
